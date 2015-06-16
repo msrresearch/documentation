@@ -1,0 +1,16 @@
+\indexentry{FaceReader (class in FaceReader)|hyperpage}{3}
+\indexentry{FaceReader.MySocket (class in FaceReader)|hyperpage}{3}
+\indexentry{connect() (FaceReader.FaceReader.MySocket method)|hyperpage}{3}
+\indexentry{receive() (FaceReader.FaceReader.MySocket method)|hyperpage}{3}
+\indexentry{send() (FaceReader.FaceReader.MySocket method)|hyperpage}{3}
+\indexentry{stop() (FaceReader.FaceReader.MySocket method)|hyperpage}{3}
+\indexentry{get\_events() (FaceReader.FaceReader method)|hyperpage}{3}
+\indexentry{get\_stimuli() (FaceReader.FaceReader method)|hyperpage}{3}
+\indexentry{score\_event() (FaceReader.FaceReader method)|hyperpage}{3}
+\indexentry{score\_stimulus() (FaceReader.FaceReader method)|hyperpage}{4}
+\indexentry{start\_analyzing() (FaceReader.FaceReader method)|hyperpage}{4}
+\indexentry{start\_detailed\_log() (FaceReader.FaceReader method)|hyperpage}{4}
+\indexentry{start\_state\_log() (FaceReader.FaceReader method)|hyperpage}{4}
+\indexentry{stop\_analyzing() (FaceReader.FaceReader method)|hyperpage}{4}
+\indexentry{stop\_detailed\_log() (FaceReader.FaceReader method)|hyperpage}{4}
+\indexentry{stop\_state\_log() (FaceReader.FaceReader method)|hyperpage}{4}

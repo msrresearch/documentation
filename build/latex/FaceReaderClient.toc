@@ -1,0 +1,7 @@
+\select@language {english}
+\contentsline {chapter}{\numberline {1}FaceReader}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}Code documentation}{3}{section.1.1}
+\contentsline {section}{\numberline {1.2}Logs}{4}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Detailed log}{4}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}State log}{4}{subsection.1.2.2}
+\contentsline {chapter}{Index}{5}{section*.19}
