@@ -1,5 +1,5 @@
-FaceReader
-**********
+facereader_client
+*****************
 
 Code documentation
 ==================
