@@ -49,7 +49,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'FaceReader Client'
+project = 'msrresearch documentaiton'
 copyright = '2015, Björn Guth'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -182,7 +182,7 @@ html_static_path = ['static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'FaceReaderClientdoc'
+htmlhelp_basename = 'msrresearch documentation'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -202,7 +202,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'FaceReaderClient.tex', 'FaceReader Client Documentation',
+  ('index', 'msrresearchdocu.tex', 'msrresearch Documentation',
    'Björn Guth', 'manual'),
 ]
 
@@ -232,7 +232,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'facereaderclient', 'FaceReader Client Documentation',
+    ('index', 'msrresearchdocu', 'msrresearch Documentation',
      ['Björn Guth'], 1)
 ]
 
@@ -246,8 +246,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'FaceReaderClient', 'FaceReader Client Documentation',
-   'Björn Guth', 'FaceReaderClient', 'One line description of project.',
+  ('index', 'msrresearch documentation', 'msrresearch Documentation',
+   'Björn Guth', 'msrresearch', 'Documentation of the code produced by msrresearch',
    'Miscellaneous'),
 ]
 
