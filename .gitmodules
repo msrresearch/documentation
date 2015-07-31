@@ -1,0 +1,3 @@
+[submodule "facereader_client"]
+	path = facereader_client
+	url = git@github.com:msrresearch/facereader_client.git
