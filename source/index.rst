@@ -11,7 +11,7 @@ Contents:
 .. toctree::
 	:maxdepth: 2
 
-	_static/code.rst
+	_static/facereader.rst
 
 
 .. only:: html
