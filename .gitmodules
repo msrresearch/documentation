@@ -1,6 +1,0 @@
-[submodule "facereader_client"]
-	path = facereader_client
-	url = git@github.com:msrresearch/facereader_client.git
-[submodule "joint_attention_paradigma"]
-	path = joint_attention_paradigma
-	url = git@github.com:msrresearch/joint_attention_paradigma.git
