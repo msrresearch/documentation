@@ -13,6 +13,7 @@ Contents:
 
 	_static/facereader.rst
 	_static/pygaze_framework.rst
+	_static/todo.rst
 
 
 

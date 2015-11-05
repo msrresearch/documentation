@@ -24,6 +24,7 @@
     <script type="text/javascript" src="underscore.js"></script>
     <script type="text/javascript" src="doctools.js"></script>
     <link rel="top" title="msrresearch_documentation 0.1 documentation" href="../index.html" />
+    <link rel="next" title="Todo List" href="todo.html" />
     <link rel="prev" title="facereader_client" href="facereader.html" /> 
   </head>
   <body role="document">
@@ -33,6 +34,9 @@
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="todo.html" title="Todo List"
+             accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="facereader.html" title="facereader_client"
              accesskey="P">previous</a> |</li>
@@ -49,9 +53,20 @@
 <h1>PyGaze Framework<a class="headerlink" href="#pygaze-framework" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="code-documentation">
 <h2>Code documentation<a class="headerlink" href="#code-documentation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="eventhandler">
+<h3>EventHandler<a class="headerlink" href="#eventhandler" title="Permalink to this headline">¶</a></h3>
 <dl class="class">
-<dt id="pygaze_framework.ScreenHandler">
-<em class="property">class </em><code class="descclassname">pygaze_framework.</code><code class="descname">ScreenHandler</code><span class="sig-paren">(</span><em>resize_proportional=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pygaze_framework.ScreenHandler" title="Permalink to this definition">¶</a></dt>
+<dt id="msrresearch_helpers.pygaze_framework.EventHandler">
+<em class="property">class </em><code class="descclassname">msrresearch_helpers.pygaze_framework.</code><code class="descname">EventHandler</code><span class="sig-paren">(</span><em>keylist=[]</em>, <em>time=500</em>, <em>tracker=None</em>, <em>name='EventHandler'</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.EventHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class shall be used to detect button press and AOI/fixation events etc.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="screenhandler">
+<h3>ScreenHandler<a class="headerlink" href="#screenhandler" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="msrresearch_helpers.pygaze_framework.ScreenHandler">
+<em class="property">class </em><code class="descclassname">msrresearch_helpers.pygaze_framework.</code><code class="descname">ScreenHandler</code><span class="sig-paren">(</span><em>resize_proportional=True</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.ScreenHandler" title="Permalink to this definition">¶</a></dt>
 <dd><p>This class should be used to handle all screen related issues.</p>
 <p>In order to make interaction with the screen as easy as possible, class was
 created to manage everything, which is needed to be done to show content on the
@@ -65,8 +80,8 @@ screen.</p>
 </tbody>
 </table>
 <dl class="class">
-<dt id="pygaze_framework.ScreenHandler.Image">
-<em class="property">class </em><code class="descname">Image</code><span class="sig-paren">(</span><em>file_name</em>, <em>position=(0</em>, <em>0)</em>, <em>size=None</em>, <em>scale_factor=1</em><span class="sig-paren">)</span><a class="headerlink" href="#pygaze_framework.ScreenHandler.Image" title="Permalink to this definition">¶</a></dt>
+<dt id="msrresearch_helpers.pygaze_framework.ScreenHandler.Image">
+<em class="property">class </em><code class="descname">Image</code><span class="sig-paren">(</span><em>file_name</em>, <em>position=(0</em>, <em>0)</em>, <em>size=None</em>, <em>scale_factor=1</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.Image" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class to store images.</p>
 <p>In order to make a interaction with images as easy as possible, this class
 the possibility to store all necessary information of an image to have easy
@@ -87,14 +102,22 @@ relevant functions of Screen_Handler.</p>
 </tbody>
 </table>
 <dl class="method">
-<dt id="pygaze_framework.ScreenHandler.Image.get_ulc_pos">
-<code class="descname">get_ulc_pos</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygaze_framework.ScreenHandler.Image.get_ulc_pos" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the position of the upper left corenr.</p>
+<dt id="msrresearch_helpers.pygaze_framework.ScreenHandler.Image.get_ulc_pos">
+<code class="descname">get_ulc_pos</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.Image.get_ulc_pos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the position of the upper left corner.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">position of the upper left corner</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
-<dt id="pygaze_framework.ScreenHandler.Image.move">
-<code class="descname">move</code><span class="sig-paren">(</span><em>new_position</em><span class="sig-paren">)</span><a class="headerlink" href="#pygaze_framework.ScreenHandler.Image.move" title="Permalink to this definition">¶</a></dt>
+<dt id="msrresearch_helpers.pygaze_framework.ScreenHandler.Image.move">
+<code class="descname">move</code><span class="sig-paren">(</span><em>new_position</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.Image.move" title="Permalink to this definition">¶</a></dt>
 <dd><p>Move the image to a new location on the screen.
 :param new_position: the new absolute position on the screen.
 :type new_position: list, tuble</p>
@@ -109,8 +132,8 @@ relevant functions of Screen_Handler.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pygaze_framework.ScreenHandler.Image.resize">
-<code class="descname">resize</code><span class="sig-paren">(</span><em>new_size</em>, <em>proportional=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pygaze_framework.ScreenHandler.Image.resize" title="Permalink to this definition">¶</a></dt>
+<dt id="msrresearch_helpers.pygaze_framework.ScreenHandler.Image.resize">
+<code class="descname">resize</code><span class="sig-paren">(</span><em>new_size</em>, <em>proportional=True</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.Image.resize" title="Permalink to this definition">¶</a></dt>
 <dd><p>A function to resize or rescale the image.</p>
 <p>Whether to resize or rescale the image is defined by the type of new_size:
 If it is list or tuple, the image will be resized, if it is float or int,
@@ -132,8 +155,55 @@ it will be rescaled.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pygaze_framework.ScreenHandler.register_draw_always">
-<code class="descclassname">ScreenHandler.</code><code class="descname">register_draw_always</code><span class="sig-paren">(</span><em>image</em><span class="sig-paren">)</span><a class="headerlink" href="#pygaze_framework.ScreenHandler.register_draw_always" title="Permalink to this definition">¶</a></dt>
+<dt id="msrresearch_helpers.pygaze_framework.ScreenHandler.draw_image">
+<code class="descclassname">ScreenHandler.</code><code class="descname">draw_image</code><span class="sig-paren">(</span><em>name</em>, <em>position=None</em>, <em>new_size=None</em>, <em>resize_proportional=None</em>, <em>draw_all=False</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.draw_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add image to the screen to be shown with <a class="reference internal" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.show" title="msrresearch_helpers.pygaze_framework.ScreenHandler.show"><code class="xref py py-func docutils literal"><span class="pre">show()</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; name of image</li>
+<li><strong>position</strong> (<em>list, tuple</em>) &#8211; position where the image should be drawn. If None, the image will be drawn the in the image stored position</li>
+<li><strong>new_size</strong> (<em>list, tuple, int, float</em>) &#8211; new size to resize the image. If None, the image will not be resized</li>
+<li><strong>draw_all</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; add the image to the separat screen for images which should be drawn with every redraw of the screen.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Todo:</th><td class="field-body"><p class="first last">If I understand the code correctly, there is at the moment no way to combine a draw_all=False and draw_all=False call of this function. This should be investigated in if it&#8217;s true fixed.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="msrresearch_helpers.pygaze_framework.ScreenHandler.draw_text">
+<code class="descclassname">ScreenHandler.</code><code class="descname">draw_text</code><span class="sig-paren">(</span><em>text</em>, <em>color=None</em>, <em>position=None</em>, <em>fontsize=12</em>, <em>font='mono'</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.draw_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw text on the screen.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>text</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; the text to be drawn</li>
+<li><strong>color</strong> (<em>str, list, tuple</em>) &#8211; the color of the text to be drawn. By default this is the foreground color.</li>
+<li><strong>position</strong> (<em>list, tuple</em>) &#8211; the position of the to be drawn text. By default it will be drawn in the center of the screen.</li>
+<li><strong>fontsize</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) &#8211; font size of the text. By default 12.</li>
+<li><strong>font</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; font in which the text should be drawn.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Todo:</th><td class="field-body"><p class="first last">This needs to be updatet to the new way of drawing stuff.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="msrresearch_helpers.pygaze_framework.ScreenHandler.register_draw_always">
+<code class="descclassname">ScreenHandler.</code><code class="descname">register_draw_always</code><span class="sig-paren">(</span><em>image</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.register_draw_always" title="Permalink to this definition">¶</a></dt>
 <dd><p>Register images, to be drawn always.</p>
 <p>The image will be added to separat Screen object to be drawn every time the screen is redrawn.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -147,11 +217,37 @@ it will be rescaled.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pygaze_framework.ScreenHandler.store_image">
-<code class="descclassname">ScreenHandler.</code><code class="descname">store_image</code><span class="sig-paren">(</span><em>name</em>, <em>file_name</em>, <em>position=(0</em>, <em>0)</em>, <em>size=None</em>, <em>scale_factor=1</em><span class="sig-paren">)</span><a class="headerlink" href="#pygaze_framework.ScreenHandler.store_image" title="Permalink to this definition">¶</a></dt>
+<dt id="msrresearch_helpers.pygaze_framework.ScreenHandler.show">
+<code class="descclassname">ScreenHandler.</code><code class="descname">show</code><span class="sig-paren">(</span><em>clear=True</em>, <em>draw_all=False</em>, <em>tracker=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.show" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show the screen, to which the images and texts are added by :py:func`darw_image`
+and <a class="reference internal" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.draw_text" title="msrresearch_helpers.pygaze_framework.ScreenHandler.draw_text"><code class="xref py py-func docutils literal"><span class="pre">draw_text()</span></code></a>. This needs to be done in order to get the screen to the display.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>clear</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; clear the screen after moving it to the display. By default True.</li>
+<li><strong>draw_all</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; draw the screen with all the objects to be drawn always. By default False.</li>
+<li><strong>tracker</strong> (<a class="reference internal" href="#msrresearch_helpers.pygaze_framework.OurTracker" title="msrresearch_helpers.pygaze_framework.OurTracker"><em>OurTracker</em></a>) &#8211; An <a class="reference internal" href="#msrresearch_helpers.pygaze_framework.OurTracker" title="msrresearch_helpers.pygaze_framework.OurTracker"><code class="xref py py-class docutils literal"><span class="pre">OurTracker</span></code></a> object. If given the current gaze position will be drawn. By default None.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="msrresearch_helpers.pygaze_framework.ScreenHandler.show_updated_avatar">
+<code class="descclassname">ScreenHandler.</code><code class="descname">show_updated_avatar</code><span class="sig-paren">(</span><em>clear=False</em>, <em>draw_all=False</em>, <em>tracker=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.show_updated_avatar" title="Permalink to this definition">¶</a></dt>
+<dd><p>A new <a class="reference internal" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.show" title="msrresearch_helpers.pygaze_framework.ScreenHandler.show"><code class="xref py py-func docutils literal"><span class="pre">show()</span></code></a> function, which I need to fully understand to write a documentation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="msrresearch_helpers.pygaze_framework.ScreenHandler.store_image">
+<code class="descclassname">ScreenHandler.</code><code class="descname">store_image</code><span class="sig-paren">(</span><em>name</em>, <em>file_name</em>, <em>position=(0</em>, <em>0)</em>, <em>size=None</em>, <em>scale_factor=1</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.store_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Store images, which should be drawn later on.</p>
 <p>In order to make the redrawing of images as easy as possible, images aren&#8217;t drawn directly to
-the screen, but instead are stored in a dictionary as <a class="reference internal" href="#pygaze_framework.ScreenHandler.Image" title="pygaze_framework.ScreenHandler.Image"><code class="xref py py-class docutils literal"><span class="pre">Image</span></code></a> objects.</p>
+the screen, but instead are stored in a dictionary as <a class="reference internal" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.Image" title="msrresearch_helpers.pygaze_framework.ScreenHandler.Image"><code class="xref py py-class docutils literal"><span class="pre">Image</span></code></a> objects.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -172,6 +268,36 @@ the screen, but instead are stored in a dictionary as <a class="reference intern
 </dd></dl>
 
 </div>
+<div class="section" id="ourtracker">
+<h3>OurTracker<a class="headerlink" href="#ourtracker" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="msrresearch_helpers.pygaze_framework.OurTracker">
+<em class="property">class </em><code class="descclassname">msrresearch_helpers.pygaze_framework.</code><code class="descname">OurTracker</code><span class="sig-paren">(</span><em>disp</em>, <em>log_name</em>, <em>date_str</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.OurTracker" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class for binding the eyetracker into the paradigm</p>
+<p>Automatically connects to the eyetracker and runs calibration mode</p>
+</dd></dl>
+
+</div>
+<div class="section" id="logger">
+<h3>Logger<a class="headerlink" href="#logger" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="msrresearch_helpers.pygaze_framework.DoLogging">
+<em class="property">class </em><code class="descclassname">msrresearch_helpers.pygaze_framework.</code><code class="descname">DoLogging</code><span class="sig-paren">(</span><em>tracker</em>, <em>log_dir</em>, <em>var_log_name</em>, <em>date_str</em>, <em>name='Logger'</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.DoLogging" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class for logging stuff</p>
+<blockquote>
+<div>so far logging:
+-time
+-gaze_postion
+at highest (internal) possible rate
+Should be adapted in a form that it takes a new sample from the eyetracker as logging event
+has very low and variable sampling rate (~75ms)</div></blockquote>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="todo-list">
+<h2>Todo List<a class="headerlink" href="#todo-list" title="Permalink to this headline">¶</a></h2>
+</div>
 </div>
 
 
@@ -183,7 +309,14 @@ the screen, but instead are stored in a dictionary as <a class="reference intern
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">PyGaze Framework</a><ul>
-<li><a class="reference internal" href="#code-documentation">Code documentation</a></li>
+<li><a class="reference internal" href="#code-documentation">Code documentation</a><ul>
+<li><a class="reference internal" href="#eventhandler">EventHandler</a></li>
+<li><a class="reference internal" href="#screenhandler">ScreenHandler</a></li>
+<li><a class="reference internal" href="#ourtracker">OurTracker</a></li>
+<li><a class="reference internal" href="#logger">Logger</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#todo-list">Todo List</a></li>
 </ul>
 </li>
 </ul>
@@ -191,6 +324,9 @@ the screen, but instead are stored in a dictionary as <a class="reference intern
   <h4>Previous topic</h4>
   <p class="topless"><a href="facereader.html"
                         title="previous chapter">facereader_client</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="todo.html"
+                        title="next chapter">Todo List</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -221,6 +357,9 @@ the screen, but instead are stored in a dictionary as <a class="reference intern
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              >index</a></li>
+        <li class="right" >
+          <a href="todo.html" title="Todo List"
+             >next</a> |</li>
         <li class="right" >
           <a href="facereader.html" title="facereader_client"
              >previous</a> |</li>

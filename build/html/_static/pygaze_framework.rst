@@ -4,6 +4,29 @@ PyGaze Framework
 Code documentation
 ==================
 
-.. currentmodule:: pygaze_framework
+EventHandler
+------------
+.. currentmodule:: msrresearch_helpers.pygaze_framework
+.. autoclass:: EventHandler
+
+
+ScreenHandler
+-------------
 .. autoclass:: ScreenHandler
 	:members:
+
+OurTracker
+----------
+
+.. autoclass:: OurTracker
+	:members:
+
+Logger
+------
+
+.. autoclass:: DoLogging
+
+Todo List
+=========
+
+.. todoList::
