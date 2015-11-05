@@ -9,11 +9,10 @@ Welcome to msrresearch_documentation's documentation!
 Contents:
 
 .. toctree::
-	:maxdepth: 2
+	:maxdepth: 3
 
 	_static/facereader.rst
 	_static/pygaze_framework.rst
-	_static/todo.rst
 
 
 

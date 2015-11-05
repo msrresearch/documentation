@@ -29,4 +29,4 @@ Logger
 Todo List
 =========
 
-.. todoList::
+.. todolist::

@@ -20,7 +20,7 @@ import shlex
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 sys.path.insert(0, os.path.abspath('../'))
-print(sys.path)
+#sys.path.insert(0, os.path.abspath('../msrresearch_helpers'))
 
 #import facereader
 
@@ -170,7 +170,7 @@ html_static_path = ['_static']
 #html_additional_pages = {}
 
 # If false, no module index is generated.
-#html_domain_indices = True
+html_domain_indices = True
 
 # If false, no index is generated.
 #html_use_index = True

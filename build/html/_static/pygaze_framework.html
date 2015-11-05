@@ -24,7 +24,6 @@
     <script type="text/javascript" src="underscore.js"></script>
     <script type="text/javascript" src="doctools.js"></script>
     <link rel="top" title="msrresearch_documentation 0.1 documentation" href="../index.html" />
-    <link rel="next" title="Todo List" href="todo.html" />
     <link rel="prev" title="facereader_client" href="facereader.html" /> 
   </head>
   <body role="document">
@@ -34,9 +33,6 @@
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="todo.html" title="Todo List"
-             accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="facereader.html" title="facereader_client"
              accesskey="P">previous</a> |</li>
@@ -69,13 +65,13 @@
 <em class="property">class </em><code class="descclassname">msrresearch_helpers.pygaze_framework.</code><code class="descname">ScreenHandler</code><span class="sig-paren">(</span><em>resize_proportional=True</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.ScreenHandler" title="Permalink to this definition">¶</a></dt>
 <dd><p>This class should be used to handle all screen related issues.</p>
 <p>In order to make interaction with the screen as easy as possible, class was
-created to manage everything, which is needed to be done to show content on the
-screen.</p>
+created to manage everything, which is needed to be done to show content on
+the screen.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>resize_proportional</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; Flag to determine whether images should be resized while keeping the aspect ratio or not.</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>resize_proportional</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; Flag to determine whether images should be                  resized while keeping the aspect ratio or not.</td>
 </tr>
 </tbody>
 </table>
@@ -94,7 +90,7 @@ relevant functions of Screen_Handler.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>file_name</strong> &#8211; The filename of the image</li>
 <li><strong>position</strong> (<em>tuple, list</em>) &#8211; A tuple or a list of the x and y coordinate of the image.</li>
-<li><strong>size</strong> (<em>tuple, list</em>) &#8211; The size of the image. If None, the original size of the image will be used.</li>
+<li><strong>size</strong> (<em>tuple, list</em>) &#8211; The size of the image. If None, the original size of the image                             will be used.</li>
 <li><strong>scale_factor</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) &#8211; The factor to rescale the imige</li>
 </ul>
 </td>
@@ -121,14 +117,10 @@ relevant functions of Screen_Handler.</p>
 <dd><p>Move the image to a new location on the screen.
 :param new_position: the new absolute position on the screen.
 :type new_position: list, tuble</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Todo:</th><td class="field-body">Implement relative movement.</td>
-</tr>
-</tbody>
-</table>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last"><a class="reference internal" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.Image.move" title="msrresearch_helpers.pygaze_framework.ScreenHandler.Image.move"><code class="xref py py-func docutils literal"><span class="pre">move()</span></code></a> Implement relative movement.</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -144,7 +136,7 @@ it will be rescaled.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>new_size</strong> (<em>list, tuple, int, float</em>) &#8211; The target size or scaling factor.</li>
-<li><strong>proportional</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; Whether the aspect ratio of the image should be kept while resizing. If True, the image will be scaled to fit completely within the rectangle drawn by new_size. Irrelevant for rescaling.</li>
+<li><strong>proportional</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; Whether the aspect ratio of the image should be                                    kept while resizing. If True, the image will be scaled to fit                                   completely within the rectangle drawn by new_size. Irrelevant                                   for rescaling.</li>
 </ul>
 </td>
 </tr>
@@ -162,19 +154,20 @@ it will be rescaled.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; name of image</li>
-<li><strong>position</strong> (<em>list, tuple</em>) &#8211; position where the image should be drawn. If None, the image will be drawn the in the image stored position</li>
-<li><strong>new_size</strong> (<em>list, tuple, int, float</em>) &#8211; new size to resize the image. If None, the image will not be resized</li>
-<li><strong>draw_all</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; add the image to the separat screen for images which should be drawn with every redraw of the screen.</li>
+<li><strong>position</strong> (<em>list, tuple</em>) &#8211; position where the image should be drawn. If None, the                         image will be drawn the in the image stored position</li>
+<li><strong>new_size</strong> (<em>list, tuple, int, float</em>) &#8211; new size to resize the image. If None, the image will                          not be resized</li>
+<li><strong>draw_all</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; add the image to the separat screen for images which                           should be drawn with every redraw of the screen.</li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Todo:</th><td class="field-body"><p class="first last">If I understand the code correctly, there is at the moment no way to combine a draw_all=False and draw_all=False call of this function. This should be investigated in if it&#8217;s true fixed.</p>
 </td>
 </tr>
 </tbody>
 </table>
+<div class="admonition-todo admonition" id="index-1">
+<p class="first admonition-title">Todo</p>
+<p class="last"><a class="reference internal" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.draw_image" title="msrresearch_helpers.pygaze_framework.ScreenHandler.draw_image"><code class="xref py py-func docutils literal"><span class="pre">draw_image()</span></code></a> If I understand the code                                correctly, there is at the moment no way to combine                             a draw_all=False and draw_all=False call of this                                function. This should be investigated in if it&#8217;s                                true fixed.</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -185,27 +178,29 @@ it will be rescaled.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>text</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; the text to be drawn</li>
-<li><strong>color</strong> (<em>str, list, tuple</em>) &#8211; the color of the text to be drawn. By default this is the foreground color.</li>
-<li><strong>position</strong> (<em>list, tuple</em>) &#8211; the position of the to be drawn text. By default it will be drawn in the center of the screen.</li>
+<li><strong>color</strong> (<em>str, list, tuple</em>) &#8211; the color of the text to be drawn. By default this is the                         foreground color.</li>
+<li><strong>position</strong> (<em>list, tuple</em>) &#8211; the position of the to be drawn text. By default it                            will be drawn in the center of the screen.</li>
 <li><strong>fontsize</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) &#8211; font size of the text. By default 12.</li>
 <li><strong>font</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; font in which the text should be drawn.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Todo:</th><td class="field-body"><p class="first last">This needs to be updatet to the new way of drawing stuff.</p>
-</td>
-</tr>
 </tbody>
 </table>
+<div class="admonition-todo admonition" id="index-2">
+<p class="first admonition-title">Todo</p>
+<p class="last"><a class="reference internal" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.draw_text" title="msrresearch_helpers.pygaze_framework.ScreenHandler.draw_text"><code class="xref py py-func docutils literal"><span class="pre">draw_text()</span></code></a> This needs to be updatet to the new way                          of drawing stuff.</p>
+</div>
 </dd></dl>
 
 <dl class="method">
 <dt id="msrresearch_helpers.pygaze_framework.ScreenHandler.register_draw_always">
 <code class="descclassname">ScreenHandler.</code><code class="descname">register_draw_always</code><span class="sig-paren">(</span><em>image</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.register_draw_always" title="Permalink to this definition">¶</a></dt>
 <dd><p>Register images, to be drawn always.</p>
-<p>The image will be added to separat Screen object to be drawn every time the screen is redrawn.</p>
+<p>The image will be added to separat Screen object to be drawn every time
+the screen is redrawn.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -219,16 +214,17 @@ it will be rescaled.</p>
 <dl class="method">
 <dt id="msrresearch_helpers.pygaze_framework.ScreenHandler.show">
 <code class="descclassname">ScreenHandler.</code><code class="descname">show</code><span class="sig-paren">(</span><em>clear=True</em>, <em>draw_all=False</em>, <em>tracker=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.show" title="Permalink to this definition">¶</a></dt>
-<dd><p>Show the screen, to which the images and texts are added by :py:func`darw_image`
-and <a class="reference internal" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.draw_text" title="msrresearch_helpers.pygaze_framework.ScreenHandler.draw_text"><code class="xref py py-func docutils literal"><span class="pre">draw_text()</span></code></a>. This needs to be done in order to get the screen to the display.</p>
+<dd><p>Show the screen, to which the images and texts are added by
+:py:func`darw_image` and <a class="reference internal" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.draw_text" title="msrresearch_helpers.pygaze_framework.ScreenHandler.draw_text"><code class="xref py py-func docutils literal"><span class="pre">draw_text()</span></code></a>. This needs to be done in
+order to get the screen to the display.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>clear</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; clear the screen after moving it to the display. By default True.</li>
-<li><strong>draw_all</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; draw the screen with all the objects to be drawn always. By default False.</li>
-<li><strong>tracker</strong> (<a class="reference internal" href="#msrresearch_helpers.pygaze_framework.OurTracker" title="msrresearch_helpers.pygaze_framework.OurTracker"><em>OurTracker</em></a>) &#8211; An <a class="reference internal" href="#msrresearch_helpers.pygaze_framework.OurTracker" title="msrresearch_helpers.pygaze_framework.OurTracker"><code class="xref py py-class docutils literal"><span class="pre">OurTracker</span></code></a> object. If given the current gaze position will be drawn. By default None.</li>
+<li><strong>clear</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; clear the screen after moving it to the display. By                               default True.</li>
+<li><strong>draw_all</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; draw the screen with all the objects to be drawn                               always. By default False.</li>
+<li><strong>tracker</strong> (<a class="reference internal" href="#msrresearch_helpers.pygaze_framework.OurTracker" title="msrresearch_helpers.pygaze_framework.OurTracker"><em>OurTracker</em></a>) &#8211; An <a class="reference internal" href="#msrresearch_helpers.pygaze_framework.OurTracker" title="msrresearch_helpers.pygaze_framework.OurTracker"><code class="xref py py-class docutils literal"><span class="pre">OurTracker</span></code></a> object. If given the current                          gaze position will be drawn. By default None.</li>
 </ul>
 </td>
 </tr>
@@ -239,25 +235,40 @@ and <a class="reference internal" href="#msrresearch_helpers.pygaze_framework.Sc
 <dl class="method">
 <dt id="msrresearch_helpers.pygaze_framework.ScreenHandler.show_updated_avatar">
 <code class="descclassname">ScreenHandler.</code><code class="descname">show_updated_avatar</code><span class="sig-paren">(</span><em>clear=False</em>, <em>draw_all=False</em>, <em>tracker=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.show_updated_avatar" title="Permalink to this definition">¶</a></dt>
-<dd><p>A new <a class="reference internal" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.show" title="msrresearch_helpers.pygaze_framework.ScreenHandler.show"><code class="xref py py-func docutils literal"><span class="pre">show()</span></code></a> function, which I need to fully understand to write a documentation.</p>
+<dd><p>A new <a class="reference internal" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.show" title="msrresearch_helpers.pygaze_framework.ScreenHandler.show"><code class="xref py py-func docutils literal"><span class="pre">show()</span></code></a> function, which I need to fully understand to
+write a documentation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>clear</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; clear the screen after moving it to the display. By                               default True.</li>
+<li><strong>draw_all</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; draw the screen with all the objects to be drawn                               always. By default False.</li>
+<li><strong>tracker</strong> (<a class="reference internal" href="#msrresearch_helpers.pygaze_framework.OurTracker" title="msrresearch_helpers.pygaze_framework.OurTracker"><em>OurTracker</em></a>) &#8211; An <a class="reference internal" href="#msrresearch_helpers.pygaze_framework.OurTracker" title="msrresearch_helpers.pygaze_framework.OurTracker"><code class="xref py py-class docutils literal"><span class="pre">OurTracker</span></code></a> object. If given the current                          gaze position will be drawn. By default None.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
 <dt id="msrresearch_helpers.pygaze_framework.ScreenHandler.store_image">
 <code class="descclassname">ScreenHandler.</code><code class="descname">store_image</code><span class="sig-paren">(</span><em>name</em>, <em>file_name</em>, <em>position=(0</em>, <em>0)</em>, <em>size=None</em>, <em>scale_factor=1</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.store_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Store images, which should be drawn later on.</p>
-<p>In order to make the redrawing of images as easy as possible, images aren&#8217;t drawn directly to
-the screen, but instead are stored in a dictionary as <a class="reference internal" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.Image" title="msrresearch_helpers.pygaze_framework.ScreenHandler.Image"><code class="xref py py-class docutils literal"><span class="pre">Image</span></code></a> objects.</p>
+<p>In order to make the redrawing of images as easy as possible, images
+aren&#8217;t drawn directly to the screen, but instead are stored in a
+dictionary as <a class="reference internal" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.Image" title="msrresearch_helpers.pygaze_framework.ScreenHandler.Image"><code class="xref py py-class docutils literal"><span class="pre">Image</span></code></a> objects.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; name of the image to be stored. With this name the image can also be retrieved.</li>
+<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; name of the image to be stored. With this name the image                           can also be retrieved.</li>
 <li><strong>file_name</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; directory and file name of the image.</li>
 <li><strong>position</strong> (<em>list, tuple</em>) &#8211; Position, where the image should be drawn.</li>
-<li><strong>size</strong> (<em>list, tuple</em>) &#8211; new size tor resize the image. If None is given, it will use the default size of the image</li>
-<li><strong>scale</strong> (<em>int, float</em>) &#8211; scale to rescale the image. If none is given, it will not be rescaled</li>
+<li><strong>size</strong> (<em>list, tuple</em>) &#8211; new size tor resize the image. If None is given, it will                           use the default size of the image</li>
+<li><strong>scale</strong> (<em>int, float</em>) &#8211; scale to rescale the image. If none is given, it will not                         be rescaled</li>
 </ul>
 </td>
 </tr>
@@ -297,6 +308,21 @@ has very low and variable sampling rate (~75ms)</div></blockquote>
 </div>
 <div class="section" id="todo-list">
 <h2>Todo List<a class="headerlink" href="#todo-list" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-todo admonition">
+<p class="first admonition-title">Todo</p>
+<p class="last"><a class="reference internal" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.Image.move" title="msrresearch_helpers.pygaze_framework.ScreenHandler.Image.move"><code class="xref py py-func docutils literal"><span class="pre">move()</span></code></a> Implement relative movement.</p>
+</div>
+<p class="todo-source">(The <a class="reference internal" href="#index-0"><em>original entry</em></a> is located in  /data/kjp/msrresearch_documentation/msrresearch_helpers/pygaze_framework.py:docstring of msrresearch_helpers.pygaze_framework.ScreenHandler.Image.move, line 5.)</p>
+<div class="admonition-todo admonition">
+<p class="first admonition-title">Todo</p>
+<p class="last"><a class="reference internal" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.draw_image" title="msrresearch_helpers.pygaze_framework.ScreenHandler.draw_image"><code class="xref py py-func docutils literal"><span class="pre">draw_image()</span></code></a> If I understand the code                                correctly, there is at the moment no way to combine                             a draw_all=False and draw_all=False call of this                                function. This should be investigated in if it&#8217;s                                true fixed.</p>
+</div>
+<p class="todo-source">(The <a class="reference internal" href="#index-1"><em>original entry</em></a> is located in  /data/kjp/msrresearch_documentation/msrresearch_helpers/pygaze_framework.py:docstring of msrresearch_helpers.pygaze_framework.ScreenHandler.draw_image, line 12.)</p>
+<div class="admonition-todo admonition">
+<p class="first admonition-title">Todo</p>
+<p class="last"><a class="reference internal" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.draw_text" title="msrresearch_helpers.pygaze_framework.ScreenHandler.draw_text"><code class="xref py py-func docutils literal"><span class="pre">draw_text()</span></code></a> This needs to be updatet to the new way                          of drawing stuff.</p>
+</div>
+<p class="todo-source">(The <a class="reference internal" href="#index-2"><em>original entry</em></a> is located in  /data/kjp/msrresearch_documentation/msrresearch_helpers/pygaze_framework.py:docstring of msrresearch_helpers.pygaze_framework.ScreenHandler.draw_text, line 14.)</p>
 </div>
 </div>
 
@@ -324,9 +350,6 @@ has very low and variable sampling rate (~75ms)</div></blockquote>
   <h4>Previous topic</h4>
   <p class="topless"><a href="facereader.html"
                         title="previous chapter">facereader_client</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="todo.html"
-                        title="next chapter">Todo List</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -357,9 +380,6 @@ has very low and variable sampling rate (~75ms)</div></blockquote>
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              >index</a></li>
-        <li class="right" >
-          <a href="todo.html" title="Todo List"
-             >next</a> |</li>
         <li class="right" >
           <a href="facereader.html" title="facereader_client"
              >previous</a> |</li>
