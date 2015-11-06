@@ -54,7 +54,68 @@
 <dl class="class">
 <dt id="msrresearch_helpers.pygaze_framework.EventHandler">
 <em class="property">class </em><code class="descclassname">msrresearch_helpers.pygaze_framework.</code><code class="descname">EventHandler</code><span class="sig-paren">(</span><em>keylist=[]</em>, <em>time=500</em>, <em>tracker=None</em>, <em>name='EventHandler'</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.EventHandler" title="Permalink to this definition">¶</a></dt>
-<dd><p>This class shall be used to detect button press and AOI/fixation events etc.</p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/library/threading.html#threading.Thread" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">threading.Thread</span></code></a></p>
+<p>This class shall be used to detect button press and AOI/fixation events etc.</p>
+<dl class="class">
+<dt id="msrresearch_helpers.pygaze_framework.EventHandler.Fixation_Detector">
+<em class="property">class </em><code class="descname">Fixation_Detector</code><span class="sig-paren">(</span><em>aoi_pos</em>, <em>aoi_size</em>, <em>aoi_event</em>, <em>tracker</em>, <em>aoi_tol=0</em>, <em>aoi_type='rectangle'</em>, <em>name='GazeEvent'</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.EventHandler.Fixation_Detector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/library/threading.html#threading.Thread" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">threading.Thread</span></code></a></p>
+<p>An object to detect fixations on a given AOI.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="msrresearch_helpers.pygaze_framework.EventHandler.MyEvent">
+<em class="property">class </em><code class="descclassname">EventHandler.</code><code class="descname">MyEvent</code><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.EventHandler.MyEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>An extension of <a class="reference external" href="https://docs.python.org/library/threading.html#threading.Event" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">threading.Event</span></code></a> with the possibility to
+pass information from the thread setting the event to all threads
+waiting for the event to
+be raised.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference external" href="https://docs.python.org/library/threading.html#threading.Event" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">threading.Event</span></code></a></p>
+</div>
+<dl class="method">
+<dt id="msrresearch_helpers.pygaze_framework.EventHandler.MyEvent.is_set">
+<code class="descname">is_set</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.EventHandler.MyEvent.is_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal"><span class="pre">True</span></code> if and only if the inner flag of the Event
+object is True.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="msrresearch_helpers.pygaze_framework.EventHandler.MyEvent.set">
+<code class="descname">set</code><span class="sig-paren">(</span><em>msg=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.EventHandler.MyEvent.set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the internal flag to <code class="docutils literal"><span class="pre">True</span></code> and lets the threads waiting
+resume.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>msg</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><em>object</em></a>) &#8211; Anything, which should be given to all waiting threads</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="msrresearch_helpers.pygaze_framework.EventHandler.MyEvent.wait">
+<code class="descname">wait</code><span class="sig-paren">(</span><em>timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.EventHandler.MyEvent.wait" title="Permalink to this definition">¶</a></dt>
+<dd><p>Halts the calling thread until <a class="reference internal" href="#msrresearch_helpers.pygaze_framework.EventHandler.MyEvent.set" title="msrresearch_helpers.pygaze_framework.EventHandler.MyEvent.set"><code class="xref py py-func docutils literal"><span class="pre">set()</span></code></a> is called. Returns
+whatever <a class="reference internal" href="#msrresearch_helpers.pygaze_framework.EventHandler.MyEvent.set" title="msrresearch_helpers.pygaze_framework.EventHandler.MyEvent.set"><code class="xref py py-func docutils literal"><span class="pre">set()</span></code></a> is given. If nothing is given to <a class="reference internal" href="#msrresearch_helpers.pygaze_framework.EventHandler.MyEvent.set" title="msrresearch_helpers.pygaze_framework.EventHandler.MyEvent.set"><code class="xref py py-func docutils literal"><span class="pre">set()</span></code></a>,
+<code class="docutils literal"><span class="pre">None</span></code> will be returned.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="method">
+<dt id="msrresearch_helpers.pygaze_framework.EventHandler.wait_for_either_key">
+<code class="descclassname">EventHandler.</code><code class="descname">wait_for_either_key</code><span class="sig-paren">(</span><em>keylist</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.EventHandler.wait_for_either_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function to wait for one of a given list of keys to be pressed.</p>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last"><a class="reference internal" href="#msrresearch_helpers.pygaze_framework.EventHandler.wait_for_either_key" title="msrresearch_helpers.pygaze_framework.EventHandler.wait_for_either_key"><code class="xref py py-func docutils literal"><span class="pre">wait_for_either_key()</span></code></a> rewrite this function to work                          with <a class="reference internal" href="#msrresearch_helpers.pygaze_framework.EventHandler.MyEvent" title="msrresearch_helpers.pygaze_framework.EventHandler.MyEvent"><code class="xref py py-class docutils literal"><span class="pre">MyEvent</span></code></a></p>
+</div>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -117,7 +178,7 @@ relevant functions of Screen_Handler.</p>
 <dd><p>Move the image to a new location on the screen.
 :param new_position: the new absolute position on the screen.
 :type new_position: list, tuble</p>
-<div class="admonition-todo admonition" id="index-0">
+<div class="admonition-todo admonition" id="index-1">
 <p class="first admonition-title">Todo</p>
 <p class="last"><a class="reference internal" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.Image.move" title="msrresearch_helpers.pygaze_framework.ScreenHandler.Image.move"><code class="xref py py-func docutils literal"><span class="pre">move()</span></code></a> Implement relative movement.</p>
 </div>
@@ -164,7 +225,7 @@ it will be rescaled.</p>
 </tr>
 </tbody>
 </table>
-<div class="admonition-todo admonition" id="index-1">
+<div class="admonition-todo admonition" id="index-2">
 <p class="first admonition-title">Todo</p>
 <p class="last"><a class="reference internal" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.draw_image" title="msrresearch_helpers.pygaze_framework.ScreenHandler.draw_image"><code class="xref py py-func docutils literal"><span class="pre">draw_image()</span></code></a> If I understand the code                                correctly, there is at the moment no way to combine                             a draw_all=False and draw_all=False call of this                                function. This should be investigated in if it&#8217;s                                true fixed.</p>
 </div>
@@ -189,7 +250,7 @@ it will be rescaled.</p>
 </tr>
 </tbody>
 </table>
-<div class="admonition-todo admonition" id="index-2">
+<div class="admonition-todo admonition" id="index-3">
 <p class="first admonition-title">Todo</p>
 <p class="last"><a class="reference internal" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.draw_text" title="msrresearch_helpers.pygaze_framework.ScreenHandler.draw_text"><code class="xref py py-func docutils literal"><span class="pre">draw_text()</span></code></a> This needs to be updatet to the new way                          of drawing stuff.</p>
 </div>
@@ -310,19 +371,24 @@ has very low and variable sampling rate (~75ms)</div></blockquote>
 <h2>Todo List<a class="headerlink" href="#todo-list" title="Permalink to this headline">¶</a></h2>
 <div class="admonition-todo admonition">
 <p class="first admonition-title">Todo</p>
+<p class="last"><a class="reference internal" href="#msrresearch_helpers.pygaze_framework.EventHandler.wait_for_either_key" title="msrresearch_helpers.pygaze_framework.EventHandler.wait_for_either_key"><code class="xref py py-func docutils literal"><span class="pre">wait_for_either_key()</span></code></a> rewrite this function to work                          with <a class="reference internal" href="#msrresearch_helpers.pygaze_framework.EventHandler.MyEvent" title="msrresearch_helpers.pygaze_framework.EventHandler.MyEvent"><code class="xref py py-class docutils literal"><span class="pre">MyEvent</span></code></a></p>
+</div>
+<p class="todo-source">(The <a class="reference internal" href="#index-0"><em>original entry</em></a> is located in  /data/kjp/msrresearch_documentation/msrresearch_helpers/pygaze_framework.py:docstring of msrresearch_helpers.pygaze_framework.EventHandler.wait_for_either_key, line 3.)</p>
+<div class="admonition-todo admonition">
+<p class="first admonition-title">Todo</p>
 <p class="last"><a class="reference internal" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.Image.move" title="msrresearch_helpers.pygaze_framework.ScreenHandler.Image.move"><code class="xref py py-func docutils literal"><span class="pre">move()</span></code></a> Implement relative movement.</p>
 </div>
-<p class="todo-source">(The <a class="reference internal" href="#index-0"><em>original entry</em></a> is located in  /data/kjp/msrresearch_documentation/msrresearch_helpers/pygaze_framework.py:docstring of msrresearch_helpers.pygaze_framework.ScreenHandler.Image.move, line 5.)</p>
+<p class="todo-source">(The <a class="reference internal" href="#index-1"><em>original entry</em></a> is located in  /data/kjp/msrresearch_documentation/msrresearch_helpers/pygaze_framework.py:docstring of msrresearch_helpers.pygaze_framework.ScreenHandler.Image.move, line 5.)</p>
 <div class="admonition-todo admonition">
 <p class="first admonition-title">Todo</p>
 <p class="last"><a class="reference internal" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.draw_image" title="msrresearch_helpers.pygaze_framework.ScreenHandler.draw_image"><code class="xref py py-func docutils literal"><span class="pre">draw_image()</span></code></a> If I understand the code                                correctly, there is at the moment no way to combine                             a draw_all=False and draw_all=False call of this                                function. This should be investigated in if it&#8217;s                                true fixed.</p>
 </div>
-<p class="todo-source">(The <a class="reference internal" href="#index-1"><em>original entry</em></a> is located in  /data/kjp/msrresearch_documentation/msrresearch_helpers/pygaze_framework.py:docstring of msrresearch_helpers.pygaze_framework.ScreenHandler.draw_image, line 12.)</p>
+<p class="todo-source">(The <a class="reference internal" href="#index-2"><em>original entry</em></a> is located in  /data/kjp/msrresearch_documentation/msrresearch_helpers/pygaze_framework.py:docstring of msrresearch_helpers.pygaze_framework.ScreenHandler.draw_image, line 12.)</p>
 <div class="admonition-todo admonition">
 <p class="first admonition-title">Todo</p>
 <p class="last"><a class="reference internal" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.draw_text" title="msrresearch_helpers.pygaze_framework.ScreenHandler.draw_text"><code class="xref py py-func docutils literal"><span class="pre">draw_text()</span></code></a> This needs to be updatet to the new way                          of drawing stuff.</p>
 </div>
-<p class="todo-source">(The <a class="reference internal" href="#index-2"><em>original entry</em></a> is located in  /data/kjp/msrresearch_documentation/msrresearch_helpers/pygaze_framework.py:docstring of msrresearch_helpers.pygaze_framework.ScreenHandler.draw_text, line 14.)</p>
+<p class="todo-source">(The <a class="reference internal" href="#index-3"><em>original entry</em></a> is located in  /data/kjp/msrresearch_documentation/msrresearch_helpers/pygaze_framework.py:docstring of msrresearch_helpers.pygaze_framework.ScreenHandler.draw_text, line 14.)</p>
 </div>
 </div>
 

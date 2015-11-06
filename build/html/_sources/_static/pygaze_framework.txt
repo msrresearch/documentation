@@ -8,6 +8,8 @@ EventHandler
 ------------
 .. currentmodule:: msrresearch_helpers.pygaze_framework
 .. autoclass:: EventHandler
+	:show-inheritance:
+	:members:
 
 
 ScreenHandler
