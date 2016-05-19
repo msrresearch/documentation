@@ -4,7 +4,7 @@ facereader_client
 Code documentation
 ==================
 
-.. currentmodule:: facereader
+.. currentmodule:: msrresearch_helpers.facereader
 .. autoclass:: FaceReader
 	:members:
 

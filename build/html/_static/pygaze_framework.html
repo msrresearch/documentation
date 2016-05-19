@@ -4,6 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
     <title>PyGaze Framework &mdash; msrresearch_documentation 0.1 documentation</title>
@@ -53,14 +54,70 @@
 <h3>EventHandler<a class="headerlink" href="#eventhandler" title="Permalink to this headline">¶</a></h3>
 <dl class="class">
 <dt id="msrresearch_helpers.pygaze_framework.EventHandler">
-<em class="property">class </em><code class="descclassname">msrresearch_helpers.pygaze_framework.</code><code class="descname">EventHandler</code><span class="sig-paren">(</span><em>keylist=[]</em>, <em>time=500</em>, <em>tracker=None</em>, <em>name='EventHandler'</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.EventHandler" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">msrresearch_helpers.pygaze_framework.</code><code class="descname">EventHandler</code><span class="sig-paren">(</span><em>keylist=[]</em>, <em>time=500</em>, <em>name='EventHandler'</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.EventHandler" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/library/threading.html#threading.Thread" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">threading.Thread</span></code></a></p>
 <p>This class shall be used to detect button press and AOI/fixation events etc.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>keylist</strong> &#8211; </li>
+<li><strong>time</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) &#8211; in [ms]</li>
+<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; Name for thread</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="msrresearch_helpers.pygaze_framework.EventHandler.BlinkDetector">
+<em class="property">class </em><code class="descname">BlinkDetector</code><span class="sig-paren">(</span><em>tracker</em>, <em>name='BlinkDetector'</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.EventHandler.BlinkDetector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/library/threading.html#threading.Thread" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">threading.Thread</span></code></a></p>
+<p>A class to detect blinks</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>tracker</strong> (<em>pygaze_framework.OurTracker object</em>) &#8211; Eyetracker to detect blinks</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 <dl class="class">
 <dt id="msrresearch_helpers.pygaze_framework.EventHandler.Fixation_Detector">
-<em class="property">class </em><code class="descname">Fixation_Detector</code><span class="sig-paren">(</span><em>aoi_pos</em>, <em>aoi_size</em>, <em>aoi_event</em>, <em>tracker</em>, <em>aoi_tol=0</em>, <em>aoi_type='rectangle'</em>, <em>name='GazeEvent'</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.EventHandler.Fixation_Detector" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">EventHandler.</code><code class="descname">Fixation_Detector</code><span class="sig-paren">(</span><em>aoi_pos</em>, <em>aoi_size</em>, <em>aoi_event</em>, <em>tracker</em>, <em>aoi_tol=0</em>, <em>aoi_type='rectangle'</em>, <em>name='GazeEvent'</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.EventHandler.Fixation_Detector" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/library/threading.html#threading.Thread" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">threading.Thread</span></code></a></p>
 <p>An object to detect fixations on a given AOI.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>aoi_pos</strong> &#8211; </li>
+<li><strong>aoi_size</strong> &#8211; </li>
+<li><strong>aoi_event</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="msrresearch_helpers.pygaze_framework.EventHandler.JADetector">
+<em class="property">class </em><code class="descclassname">EventHandler.</code><code class="descname">JADetector</code><span class="sig-paren">(</span><em>tracker</em>, <em>name='JADetector'</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.EventHandler.JADetector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/library/threading.html#threading.Thread" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">threading.Thread</span></code></a></p>
+<p>A class to detect joint attention by agent and participant</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>tracker</strong> (<em>pygaze_framework.OurTracker object</em>) &#8211; Eyetracker to detect blinks</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="class">
@@ -68,8 +125,7 @@
 <em class="property">class </em><code class="descclassname">EventHandler.</code><code class="descname">MyEvent</code><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.EventHandler.MyEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>An extension of <a class="reference external" href="https://docs.python.org/library/threading.html#threading.Event" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">threading.Event</span></code></a> with the possibility to
 pass information from the thread setting the event to all threads
-waiting for the event to
-be raised.</p>
+waiting for the event to be raised.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last"><a class="reference external" href="https://docs.python.org/library/threading.html#threading.Event" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">threading.Event</span></code></a></p>
@@ -103,6 +159,21 @@ resume.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="msrresearch_helpers.pygaze_framework.EventHandler.MyEvent.set_micro_state">
+<code class="descname">set_micro_state</code><span class="sig-paren">(</span><em>msg=None</em>, <em>msg2=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.EventHandler.MyEvent.set_micro_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the internal flag to <code class="docutils literal"><span class="pre">True</span></code> and lets the threads waiting
+resume.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>msg</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><em>object</em></a>) &#8211; Anything, which should be given to all waiting threads</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="msrresearch_helpers.pygaze_framework.EventHandler.MyEvent.wait">
 <code class="descname">wait</code><span class="sig-paren">(</span><em>timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.EventHandler.MyEvent.wait" title="Permalink to this definition">¶</a></dt>
 <dd><p>Halts the calling thread until <a class="reference internal" href="#msrresearch_helpers.pygaze_framework.EventHandler.MyEvent.set" title="msrresearch_helpers.pygaze_framework.EventHandler.MyEvent.set"><code class="xref py py-func docutils literal"><span class="pre">set()</span></code></a> is called. Returns
@@ -113,12 +184,71 @@ whatever <a class="reference internal" href="#msrresearch_helpers.pygaze_framewo
 </dd></dl>
 
 <dl class="method">
+<dt id="msrresearch_helpers.pygaze_framework.EventHandler.create_aoi_from_coordinates">
+<code class="descclassname">EventHandler.</code><code class="descname">create_aoi_from_coordinates</code><span class="sig-paren">(</span><em>name</em>, <em>position</em>, <em>size</em>, <em>aoi_tolerance=0</em>, <em>aoi_type='rectangle'</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.EventHandler.create_aoi_from_coordinates" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to create AOI and Fixation_Detector from given coordinates</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; Name of AOI</li>
+<li><strong>position</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#tuple" title="(in Python v2.7)"><em>tuple</em></a>) &#8211; The Position of the upper left corner of the AOI</li>
+<li><strong>size</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#tuple" title="(in Python v2.7)"><em>tuple</em></a>) &#8211; Size of the AOI</li>
+<li><strong>aoi_tolerance</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) &#8211; Tolerance of the AOI</li>
+<li><strong>aoi_type</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; Type of the AOI</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="msrresearch_helpers.pygaze_framework.EventHandler.create_aoi_from_image">
+<code class="descclassname">EventHandler.</code><code class="descname">create_aoi_from_image</code><span class="sig-paren">(</span><em>name</em>, <em>image</em>, <em>aoi_tolerance=0.0</em>, <em>aoitype='rectangle'</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.EventHandler.create_aoi_from_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to create AOI and Fixation_Detector on image</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; Name of AOI</li>
+<li><strong>image</strong> &#8211; Image to which AOI is created</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="msrresearch_helpers.pygaze_framework.EventHandler.create_events">
+<code class="descclassname">EventHandler.</code><code class="descname">create_events</code><span class="sig-paren">(</span><em>keylist</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.EventHandler.create_events" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create events for buttons presses</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>keylist</strong> &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="msrresearch_helpers.pygaze_framework.EventHandler.start_fixation_detectors">
+<code class="descclassname">EventHandler.</code><code class="descname">start_fixation_detectors</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.EventHandler.start_fixation_detectors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to start all fixations detectors for all AOIs</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="msrresearch_helpers.pygaze_framework.EventHandler.wait_for_either_key">
 <code class="descclassname">EventHandler.</code><code class="descname">wait_for_either_key</code><span class="sig-paren">(</span><em>keylist</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.EventHandler.wait_for_either_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>A function to wait for one of a given list of keys to be pressed.</p>
 <div class="admonition-todo admonition" id="index-0">
 <p class="first admonition-title">Todo</p>
-<p class="last"><a class="reference internal" href="#msrresearch_helpers.pygaze_framework.EventHandler.wait_for_either_key" title="msrresearch_helpers.pygaze_framework.EventHandler.wait_for_either_key"><code class="xref py py-func docutils literal"><span class="pre">wait_for_either_key()</span></code></a> rewrite this function to work                          with <a class="reference internal" href="#msrresearch_helpers.pygaze_framework.EventHandler.MyEvent" title="msrresearch_helpers.pygaze_framework.EventHandler.MyEvent"><code class="xref py py-class docutils literal"><span class="pre">MyEvent</span></code></a></p>
+<p class="last"><a class="reference internal" href="#msrresearch_helpers.pygaze_framework.EventHandler.wait_for_either_key" title="msrresearch_helpers.pygaze_framework.EventHandler.wait_for_either_key"><code class="xref py py-func docutils literal"><span class="pre">wait_for_either_key()</span></code></a> rewrite this function to work                        with <a class="reference internal" href="#msrresearch_helpers.pygaze_framework.EventHandler.MyEvent" title="msrresearch_helpers.pygaze_framework.EventHandler.MyEvent"><code class="xref py py-class docutils literal"><span class="pre">MyEvent</span></code></a></p>
 </div>
 </dd></dl>
 
@@ -129,16 +259,24 @@ whatever <a class="reference internal" href="#msrresearch_helpers.pygaze_framewo
 <h3>ScreenHandler<a class="headerlink" href="#screenhandler" title="Permalink to this headline">¶</a></h3>
 <dl class="class">
 <dt id="msrresearch_helpers.pygaze_framework.ScreenHandler">
-<em class="property">class </em><code class="descclassname">msrresearch_helpers.pygaze_framework.</code><code class="descname">ScreenHandler</code><span class="sig-paren">(</span><em>resize_proportional=True</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.ScreenHandler" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">msrresearch_helpers.pygaze_framework.</code><code class="descname">ScreenHandler</code><span class="sig-paren">(</span><em>event_handler=None</em>, <em>agent_dir=None</em>, <em>agent_size=None</em>, <em>agent_pos=None</em>, <em>agent_dict=None</em>, <em>tar_dir=None</em>, <em>tar_size=None</em>, <em>tar_dict=None</em>, <em>resize_proportional=True</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.ScreenHandler" title="Permalink to this definition">¶</a></dt>
 <dd><p>This class should be used to handle all screen related issues.</p>
-<p>In order to make interaction with the screen as easy as possible, class was
-created to manage everything, which is needed to be done to show content on
-the screen.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>resize_proportional</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; Flag to determine whether images should be                  resized while keeping the aspect ratio or not.</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>event_handler</strong> (<em>A pygaze_framework EventHandler object</em>) &#8211; Event handler</li>
+<li><strong>agent_dir</strong> (<em>use os.path.join method</em>) &#8211; directory where all images of agent are located</li>
+<li><strong>agent_size</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#list" title="(in Python v2.7)"><em>list</em></a>) &#8211; Size of agent in pixels</li>
+<li><strong>agent_pos</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#tuple" title="(in Python v2.7)"><em>tuple</em></a>) &#8211; Postion of agent on screen</li>
+<li><strong>agent_dict</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#dict" title="(in Python v2.7)"><em>dict</em></a>) &#8211; A dictionary containing translation from names used in                       this framework and the filenames of the images of the                       agent</li>
+<li><strong>tar_dir</strong> (<em>use os.path.join method</em>) &#8211; directory containing all objects which will be presented                    on the screen</li>
+<li><strong>tar_size</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#tuple" title="(in Python v2.7)"><em>tuple</em></a>) &#8211; Size of targets in pixels</li>
+<li><strong>tar_dict</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#dict" title="(in Python v2.7)"><em>dict</em></a>) &#8211; dictionary containing translation between internal use                     and file names</li>
+<li><strong>resize_proportional</strong> (<em>boolian</em>) &#8211; KP</li>
+</ul>
+</td>
 </tr>
 </tbody>
 </table>
@@ -157,7 +295,7 @@ relevant functions of Screen_Handler.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>file_name</strong> &#8211; The filename of the image</li>
 <li><strong>position</strong> (<em>tuple, list</em>) &#8211; A tuple or a list of the x and y coordinate of the image.</li>
-<li><strong>size</strong> (<em>tuple, list</em>) &#8211; The size of the image. If None, the original size of the image                             will be used.</li>
+<li><strong>size</strong> (<em>tuple, list</em>) &#8211; The size of the image. If None, the original size of the image                        will be used.</li>
 <li><strong>scale_factor</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) &#8211; The factor to rescale the imige</li>
 </ul>
 </td>
@@ -181,9 +319,15 @@ relevant functions of Screen_Handler.</p>
 <dl class="method">
 <dt id="msrresearch_helpers.pygaze_framework.ScreenHandler.Image.move">
 <code class="descname">move</code><span class="sig-paren">(</span><em>new_position</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.Image.move" title="Permalink to this definition">¶</a></dt>
-<dd><p>Move the image to a new location on the screen.
-:param new_position: the new absolute position on the screen.
-:type new_position: list, tuble</p>
+<dd><p>Move the image to a new location on the screen.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>new_position</strong> (<em>list, tuble</em>) &#8211; the new absolute position on the screen.</td>
+</tr>
+</tbody>
+</table>
 <div class="admonition-todo admonition" id="index-1">
 <p class="first admonition-title">Todo</p>
 <p class="last"><a class="reference internal" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.Image.move" title="msrresearch_helpers.pygaze_framework.ScreenHandler.Image.move"><code class="xref py py-func docutils literal"><span class="pre">move()</span></code></a> Implement relative movement.</p>
@@ -203,7 +347,7 @@ it will be rescaled.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>new_size</strong> (<em>list, tuple, int, float</em>) &#8211; The target size or scaling factor.</li>
-<li><strong>proportional</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; Whether the aspect ratio of the image should be                                    kept while resizing. If True, the image will be scaled to fit                                   completely within the rectangle drawn by new_size. Irrelevant                                   for rescaling.</li>
+<li><strong>proportional</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; Whether the aspect ratio of the image should be                            kept while resizing. If True, the image will be scaled to fit                            completely within the rectangle drawn by new_size. Irrelevant                            for rescaling.</li>
 </ul>
 </td>
 </tr>
@@ -214,18 +358,37 @@ it will be rescaled.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="msrresearch_helpers.pygaze_framework.ScreenHandler.draw_agent_on_target_screen">
+<code class="descclassname">ScreenHandler.</code><code class="descname">draw_agent_on_target_screen</code><span class="sig-paren">(</span><em>agent</em>, <em>tracker=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.draw_agent_on_target_screen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to draw current agent on screen</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>agent</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; Name of agent to be drawn</li>
+<li><strong>tracker</strong> (<a class="reference internal" href="#msrresearch_helpers.pygaze_framework.OurTracker" title="msrresearch_helpers.pygaze_framework.OurTracker"><code class="xref py py-class docutils literal"><span class="pre">OurTracker</span></code></a>) &#8211; The eyetracker used in the experiment</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="msrresearch_helpers.pygaze_framework.ScreenHandler.draw_image">
-<code class="descclassname">ScreenHandler.</code><code class="descname">draw_image</code><span class="sig-paren">(</span><em>name</em>, <em>position=None</em>, <em>new_size=None</em>, <em>resize_proportional=None</em>, <em>draw_all=False</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.draw_image" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">ScreenHandler.</code><code class="descname">draw_image</code><span class="sig-paren">(</span><em>screen</em>, <em>name</em>, <em>position=None</em>, <em>new_size=None</em>, <em>resize_proportional=None</em>, <em>draw_all=False</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.draw_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add image to the screen to be shown with <a class="reference internal" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.show" title="msrresearch_helpers.pygaze_framework.ScreenHandler.show"><code class="xref py py-func docutils literal"><span class="pre">show()</span></code></a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>screen</strong> (<code class="xref py py-class docutils literal"><span class="pre">pygaze.libscreen.Screen</span></code>) &#8211; the screen, the image should be drawn on</li>
 <li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; name of image</li>
-<li><strong>position</strong> (<em>list, tuple</em>) &#8211; position where the image should be drawn. If None, the                         image will be drawn the in the image stored position</li>
-<li><strong>new_size</strong> (<em>list, tuple, int, float</em>) &#8211; new size to resize the image. If None, the image will                          not be resized</li>
-<li><strong>draw_all</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; add the image to the separat screen for images which                           should be drawn with every redraw of the screen.</li>
+<li><strong>position</strong> (<em>list, tuple</em>) &#8211; position where the image should be drawn. If None, the                        image will be drawn the in the image stored position</li>
+<li><strong>new_size</strong> (<em>list, tuple, int, float</em>) &#8211; new size to resize the image. If None, the image will                        not be resized</li>
+<li><strong>draw_all</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; add the image to the separat screen for images which                        should be drawn with every redraw of the screen.</li>
 </ul>
 </td>
 </tr>
@@ -233,13 +396,13 @@ it will be rescaled.</p>
 </table>
 <div class="admonition-todo admonition" id="index-2">
 <p class="first admonition-title">Todo</p>
-<p class="last"><a class="reference internal" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.draw_image" title="msrresearch_helpers.pygaze_framework.ScreenHandler.draw_image"><code class="xref py py-func docutils literal"><span class="pre">draw_image()</span></code></a> If I understand the code                                correctly, there is at the moment no way to combine                             a draw_all=False and draw_all=False call of this                                function. This should be investigated in if it&#8217;s                                true fixed.</p>
+<p class="last"><a class="reference internal" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.draw_image" title="msrresearch_helpers.pygaze_framework.ScreenHandler.draw_image"><code class="xref py py-func docutils literal"><span class="pre">draw_image()</span></code></a> If I understand the code                        correctly, there is at the moment no way to combine                        a draw_all=False and draw_all=False call of this                        function. This should be investigated in if it&#8217;s                        true fixed.</p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="msrresearch_helpers.pygaze_framework.ScreenHandler.draw_text">
-<code class="descclassname">ScreenHandler.</code><code class="descname">draw_text</code><span class="sig-paren">(</span><em>text</em>, <em>color=None</em>, <em>position=None</em>, <em>fontsize=12</em>, <em>font='mono'</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.draw_text" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">ScreenHandler.</code><code class="descname">draw_text</code><span class="sig-paren">(</span><em>text</em>, <em>screen</em>, <em>color=None</em>, <em>position=None</em>, <em>fontsize=12</em>, <em>font='mono'</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.draw_text" title="Permalink to this definition">¶</a></dt>
 <dd><p>Draw text on the screen.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -247,8 +410,8 @@ it will be rescaled.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>text</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; the text to be drawn</li>
-<li><strong>color</strong> (<em>str, list, tuple</em>) &#8211; the color of the text to be drawn. By default this is the                         foreground color.</li>
-<li><strong>position</strong> (<em>list, tuple</em>) &#8211; the position of the to be drawn text. By default it                            will be drawn in the center of the screen.</li>
+<li><strong>color</strong> (<em>str, list, tuple</em>) &#8211; the color of the text to be drawn. By default this is the                        foreground color.</li>
+<li><strong>position</strong> (<em>list, tuple</em>) &#8211; the position of the to be drawn text. By default it                        will be drawn in the center of the screen.</li>
 <li><strong>fontsize</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) &#8211; font size of the text. By default 12.</li>
 <li><strong>font</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; font in which the text should be drawn.</li>
 </ul>
@@ -258,14 +421,40 @@ it will be rescaled.</p>
 </table>
 <div class="admonition-todo admonition" id="index-3">
 <p class="first admonition-title">Todo</p>
-<p class="last"><a class="reference internal" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.draw_text" title="msrresearch_helpers.pygaze_framework.ScreenHandler.draw_text"><code class="xref py py-func docutils literal"><span class="pre">draw_text()</span></code></a> This needs to be updatet to the new way                          of drawing stuff.</p>
+<p class="last"><a class="reference internal" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.draw_text" title="msrresearch_helpers.pygaze_framework.ScreenHandler.draw_text"><code class="xref py py-func docutils literal"><span class="pre">draw_text()</span></code></a> This needs to be updatet to the new way                        of drawing stuff.</p>
 </div>
+</dd></dl>
+
+<dl class="method">
+<dt id="msrresearch_helpers.pygaze_framework.ScreenHandler.give_stim_tacker_signal">
+<code class="descclassname">ScreenHandler.</code><code class="descname">give_stim_tacker_signal</code><span class="sig-paren">(</span><em>screen</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.give_stim_tacker_signal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method that will create a little black square for stim tracking using a Tobii stim_tracker_square,
+if also a white sqare is used, bugs in blinking appear...</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="msrresearch_helpers.pygaze_framework.ScreenHandler.make_all_screens">
+<code class="descclassname">ScreenHandler.</code><code class="descname">make_all_screens</code><span class="sig-paren">(</span><em>objectpicker</em>, <em>tar_dict</em>, <em>neutral_agent</em>, <em>agent_aoi_pos</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.make_all_screens" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to create all possible screens that could be shown in a                single block of an experiment</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>objectpicker</strong> (<em>objectpicker object</em>) &#8211; objectpicker object form pygaze_framework</li>
+<li><strong>tar_dict</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#dict" title="(in Python v2.7)"><em>dict</em></a>) &#8211; Dictionary containing names of targets and coordinates</li>
+<li><strong>neutral_agent</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; Name of neutral agent</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
 <dt id="msrresearch_helpers.pygaze_framework.ScreenHandler.register_draw_always">
 <code class="descclassname">ScreenHandler.</code><code class="descname">register_draw_always</code><span class="sig-paren">(</span><em>image</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.register_draw_always" title="Permalink to this definition">¶</a></dt>
-<dd><p>Register images, to be drawn always.</p>
+<dd><p>Register images, to be drawn always. OBSOLETE?</p>
 <p>The image will be added to separat Screen object to be drawn every time
 the screen is redrawn.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -280,7 +469,7 @@ the screen is redrawn.</p>
 
 <dl class="method">
 <dt id="msrresearch_helpers.pygaze_framework.ScreenHandler.show">
-<code class="descclassname">ScreenHandler.</code><code class="descname">show</code><span class="sig-paren">(</span><em>clear=True</em>, <em>draw_all=False</em>, <em>tracker=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.show" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">ScreenHandler.</code><code class="descname">show</code><span class="sig-paren">(</span><em>screen</em>, <em>color='green'</em>, <em>tracker=None</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.show" title="Permalink to this definition">¶</a></dt>
 <dd><p>Show the screen, to which the images and texts are added by
 :py:func`darw_image` and <a class="reference internal" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.draw_text" title="msrresearch_helpers.pygaze_framework.ScreenHandler.draw_text"><code class="xref py py-func docutils literal"><span class="pre">draw_text()</span></code></a>. This needs to be done in
 order to get the screen to the display.</p>
@@ -289,9 +478,9 @@ order to get the screen to the display.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>clear</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; clear the screen after moving it to the display. By                               default True.</li>
-<li><strong>draw_all</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; draw the screen with all the objects to be drawn                               always. By default False.</li>
-<li><strong>tracker</strong> (<a class="reference internal" href="#msrresearch_helpers.pygaze_framework.OurTracker" title="msrresearch_helpers.pygaze_framework.OurTracker"><em>OurTracker</em></a>) &#8211; An <a class="reference internal" href="#msrresearch_helpers.pygaze_framework.OurTracker" title="msrresearch_helpers.pygaze_framework.OurTracker"><code class="xref py py-class docutils literal"><span class="pre">OurTracker</span></code></a> object. If given the current                          gaze position will be drawn. By default None.</li>
+<li><strong>screen</strong> (<em>psychopy screen</em>) &#8211; psychopy screen to be shown</li>
+<li><strong>show_gaze_pos</strong> (<em>boolian</em>) &#8211; If Set to True a fixation cross will be shown a current gaze position</li>
+<li><strong>color</strong> &#8211; Color of fixation cross</li>
 </ul>
 </td>
 </tr>
@@ -309,9 +498,9 @@ write a documentation.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>clear</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; clear the screen after moving it to the display. By                               default True.</li>
-<li><strong>draw_all</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; draw the screen with all the objects to be drawn                               always. By default False.</li>
-<li><strong>tracker</strong> (<a class="reference internal" href="#msrresearch_helpers.pygaze_framework.OurTracker" title="msrresearch_helpers.pygaze_framework.OurTracker"><em>OurTracker</em></a>) &#8211; An <a class="reference internal" href="#msrresearch_helpers.pygaze_framework.OurTracker" title="msrresearch_helpers.pygaze_framework.OurTracker"><code class="xref py py-class docutils literal"><span class="pre">OurTracker</span></code></a> object. If given the current                          gaze position will be drawn. By default None.</li>
+<li><strong>clear</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; clear the screen after moving it to the display. By                        default True.</li>
+<li><strong>draw_all</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; draw the screen with all the objects to be drawn                        always. By default False.</li>
+<li><strong>tracker</strong> (<a class="reference internal" href="#msrresearch_helpers.pygaze_framework.OurTracker" title="msrresearch_helpers.pygaze_framework.OurTracker"><em>OurTracker</em></a>) &#8211; An <a class="reference internal" href="#msrresearch_helpers.pygaze_framework.OurTracker" title="msrresearch_helpers.pygaze_framework.OurTracker"><code class="xref py py-class docutils literal"><span class="pre">OurTracker</span></code></a> object. If given the current                        gaze position will be drawn. By default None.</li>
 </ul>
 </td>
 </tr>
@@ -331,11 +520,11 @@ dictionary as <a class="reference internal" href="#msrresearch_helpers.pygaze_fr
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; name of the image to be stored. With this name the image                           can also be retrieved.</li>
+<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; name of the image to be stored. With this name the image                        can also be retrieved.</li>
 <li><strong>file_name</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; directory and file name of the image.</li>
 <li><strong>position</strong> (<em>list, tuple</em>) &#8211; Position, where the image should be drawn.</li>
-<li><strong>size</strong> (<em>list, tuple</em>) &#8211; new size tor resize the image. If None is given, it will                           use the default size of the image</li>
-<li><strong>scale</strong> (<em>int, float</em>) &#8211; scale to rescale the image. If none is given, it will not                         be rescaled</li>
+<li><strong>size</strong> (<em>list, tuple</em>) &#8211; new size tor resize the image. If None is given, it will                        use the default size of the image</li>
+<li><strong>scale</strong> (<em>int, float</em>) &#8211; scale to rescale the image. If none is given, it will not                        be rescaled</li>
 </ul>
 </td>
 </tr>
@@ -352,49 +541,42 @@ dictionary as <a class="reference internal" href="#msrresearch_helpers.pygaze_fr
 <dt id="msrresearch_helpers.pygaze_framework.OurTracker">
 <em class="property">class </em><code class="descclassname">msrresearch_helpers.pygaze_framework.</code><code class="descname">OurTracker</code><span class="sig-paren">(</span><em>disp</em>, <em>log_name</em>, <em>date_str</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.OurTracker" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class for binding the eyetracker into the paradigm</p>
-<p>Automatically connects to the eyetracker and runs calibration mode</p>
+<p>Automatically connects to the eyetracker and runs calibration mode
+:param disp: Display used for psychopy interaction
+:type disp: A psychopy display object
+:param log_name: Filename of logfile produced by pygaze.eyetracker.EyeTracker.start_recording()
+:type log_name: str
+:param date_str: Date string to rename log file
+:type date_str: str</p>
 </dd></dl>
 
 </div>
 <div class="section" id="logger">
 <h3>Logger<a class="headerlink" href="#logger" title="Permalink to this headline">¶</a></h3>
-<dl class="class">
-<dt id="msrresearch_helpers.pygaze_framework.DoLogging">
-<em class="property">class </em><code class="descclassname">msrresearch_helpers.pygaze_framework.</code><code class="descname">DoLogging</code><span class="sig-paren">(</span><em>tracker</em>, <em>log_dir</em>, <em>var_log_name</em>, <em>date_str</em>, <em>name='Logger'</em><span class="sig-paren">)</span><a class="headerlink" href="#msrresearch_helpers.pygaze_framework.DoLogging" title="Permalink to this definition">¶</a></dt>
-<dd><p>A class for logging stuff</p>
-<blockquote>
-<div>so far logging:
--time
--gaze_postion
-at highest (internal) possible rate
-Should be adapted in a form that it takes a new sample from the eyetracker as logging event
-has very low and variable sampling rate (~75ms)</div></blockquote>
-</dd></dl>
-
 </div>
 </div>
 <div class="section" id="todo-list">
 <h2>Todo List<a class="headerlink" href="#todo-list" title="Permalink to this headline">¶</a></h2>
 <div class="admonition-todo admonition">
 <p class="first admonition-title">Todo</p>
-<p class="last"><a class="reference internal" href="#msrresearch_helpers.pygaze_framework.EventHandler.wait_for_either_key" title="msrresearch_helpers.pygaze_framework.EventHandler.wait_for_either_key"><code class="xref py py-func docutils literal"><span class="pre">wait_for_either_key()</span></code></a> rewrite this function to work                          with <a class="reference internal" href="#msrresearch_helpers.pygaze_framework.EventHandler.MyEvent" title="msrresearch_helpers.pygaze_framework.EventHandler.MyEvent"><code class="xref py py-class docutils literal"><span class="pre">MyEvent</span></code></a></p>
+<p class="last"><a class="reference internal" href="#msrresearch_helpers.pygaze_framework.EventHandler.wait_for_either_key" title="msrresearch_helpers.pygaze_framework.EventHandler.wait_for_either_key"><code class="xref py py-func docutils literal"><span class="pre">wait_for_either_key()</span></code></a> rewrite this function to work                        with <a class="reference internal" href="#msrresearch_helpers.pygaze_framework.EventHandler.MyEvent" title="msrresearch_helpers.pygaze_framework.EventHandler.MyEvent"><code class="xref py py-class docutils literal"><span class="pre">MyEvent</span></code></a></p>
 </div>
-<p class="todo-source">(The <a class="reference internal" href="#index-0"><em>original entry</em></a> is located in  /data/kjp/msrresearch_documentation/msrresearch_helpers/pygaze_framework.py:docstring of msrresearch_helpers.pygaze_framework.EventHandler.wait_for_either_key, line 3.)</p>
+<p class="todo-source">(The <a class="reference internal" href="#index-0"><em>original entry</em></a> is located in  D:\Git\documentation\msrresearch_helpers\pygaze_framework.py:docstring of msrresearch_helpers.pygaze_framework.EventHandler.wait_for_either_key, line 3.)</p>
 <div class="admonition-todo admonition">
 <p class="first admonition-title">Todo</p>
 <p class="last"><a class="reference internal" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.Image.move" title="msrresearch_helpers.pygaze_framework.ScreenHandler.Image.move"><code class="xref py py-func docutils literal"><span class="pre">move()</span></code></a> Implement relative movement.</p>
 </div>
-<p class="todo-source">(The <a class="reference internal" href="#index-1"><em>original entry</em></a> is located in  /data/kjp/msrresearch_documentation/msrresearch_helpers/pygaze_framework.py:docstring of msrresearch_helpers.pygaze_framework.ScreenHandler.Image.move, line 5.)</p>
+<p class="todo-source">(The <a class="reference internal" href="#index-1"><em>original entry</em></a> is located in  D:\Git\documentation\msrresearch_helpers\pygaze_framework.py:docstring of msrresearch_helpers.pygaze_framework.ScreenHandler.Image.move, line 6.)</p>
 <div class="admonition-todo admonition">
 <p class="first admonition-title">Todo</p>
-<p class="last"><a class="reference internal" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.draw_image" title="msrresearch_helpers.pygaze_framework.ScreenHandler.draw_image"><code class="xref py py-func docutils literal"><span class="pre">draw_image()</span></code></a> If I understand the code                                correctly, there is at the moment no way to combine                             a draw_all=False and draw_all=False call of this                                function. This should be investigated in if it&#8217;s                                true fixed.</p>
+<p class="last"><a class="reference internal" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.draw_image" title="msrresearch_helpers.pygaze_framework.ScreenHandler.draw_image"><code class="xref py py-func docutils literal"><span class="pre">draw_image()</span></code></a> If I understand the code                        correctly, there is at the moment no way to combine                        a draw_all=False and draw_all=False call of this                        function. This should be investigated in if it&#8217;s                        true fixed.</p>
 </div>
-<p class="todo-source">(The <a class="reference internal" href="#index-2"><em>original entry</em></a> is located in  /data/kjp/msrresearch_documentation/msrresearch_helpers/pygaze_framework.py:docstring of msrresearch_helpers.pygaze_framework.ScreenHandler.draw_image, line 12.)</p>
+<p class="todo-source">(The <a class="reference internal" href="#index-2"><em>original entry</em></a> is located in  D:\Git\documentation\msrresearch_helpers\pygaze_framework.py:docstring of msrresearch_helpers.pygaze_framework.ScreenHandler.draw_image, line 14.)</p>
 <div class="admonition-todo admonition">
 <p class="first admonition-title">Todo</p>
-<p class="last"><a class="reference internal" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.draw_text" title="msrresearch_helpers.pygaze_framework.ScreenHandler.draw_text"><code class="xref py py-func docutils literal"><span class="pre">draw_text()</span></code></a> This needs to be updatet to the new way                          of drawing stuff.</p>
+<p class="last"><a class="reference internal" href="#msrresearch_helpers.pygaze_framework.ScreenHandler.draw_text" title="msrresearch_helpers.pygaze_framework.ScreenHandler.draw_text"><code class="xref py py-func docutils literal"><span class="pre">draw_text()</span></code></a> This needs to be updatet to the new way                        of drawing stuff.</p>
 </div>
-<p class="todo-source">(The <a class="reference internal" href="#index-3"><em>original entry</em></a> is located in  /data/kjp/msrresearch_documentation/msrresearch_helpers/pygaze_framework.py:docstring of msrresearch_helpers.pygaze_framework.ScreenHandler.draw_text, line 14.)</p>
+<p class="todo-source">(The <a class="reference internal" href="#index-3"><em>original entry</em></a> is located in  D:\Git\documentation\msrresearch_helpers\pygaze_framework.py:docstring of msrresearch_helpers.pygaze_framework.ScreenHandler.draw_text, line 14.)</p>
 </div>
 </div>
 
@@ -460,7 +642,7 @@ has very low and variable sampling rate (~75ms)</div></blockquote>
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2015, Björn Guth.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.2.
     </div>
   </body>
 </html>
